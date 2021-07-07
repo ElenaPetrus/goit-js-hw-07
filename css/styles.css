@@ -19,10 +19,9 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: -15px;
+
 }
 .gallery-item{
-    flex-basis: calc(100% / 3 - 30px);
     margin: 15px;
 }
 

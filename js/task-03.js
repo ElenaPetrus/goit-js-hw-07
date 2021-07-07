@@ -24,5 +24,6 @@ const images = [
 
   galleryContainer.classList.add('gallery-list', 'list');
 
-
+  
+ 
 
