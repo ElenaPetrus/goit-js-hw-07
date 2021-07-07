@@ -17,9 +17,9 @@ const refs = {
   return refs.input.value;
   }
 
-  
+
   function onRenderBtn(event) {
-      const amount = refs.input.value;
+    const amount = refs.input.value;
     createBoxes(amount) ;
   };
 
@@ -28,7 +28,7 @@ const refs = {
     for (let i = 1; i <= amount; i += 1){
           let divColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
           divSize += 10;
-          const boxEl = '<div class = "box" style="background-color: #${divColor}; width: ${divSize}px; margin: 15px; height:${divSize}px;"></div>'
+          const boxEl = `<div class = "box" style="background-color: ${divColor}; width: ${divSize}px; margin: 15px; height:${divSize}px;"></div>`
           refs.boxesContainer.insertAdjacentHTML('beforeend', boxEl);
       }
 
@@ -36,7 +36,7 @@ const refs = {
   
   function onClearBtn() {
     refs.input.value = '';
-    // boxesContainer.innerHTML = '';
+    // refs.boxesContainer.innerHTML = '';
     while (refs.boxesContainer.firstChild) {
         refs.boxesContainer.removeChild(refs.boxesContainer.firstChild);
   }
